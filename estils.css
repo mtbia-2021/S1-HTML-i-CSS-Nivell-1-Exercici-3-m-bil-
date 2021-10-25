@@ -1,0 +1,129 @@
+* {
+    margin: 10px;
+    padding: 10px; /* margin i padding canviaran al llarg del projecte */
+    box-sizing: border-box; /* per a que les caixes no es desbordin unes amb les altres */
+    max-width: 1200px;
+}
+
+.pare {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+    .header {
+        background: #000000;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+        .menu {
+            background: #27394e;
+            display: flex;
+            flex-flow: row nowrap;
+            height: auto;
+            align-items: center;
+        }
+
+            .logo {
+                background: #ea584b;
+                flex: 1 1 auto;
+            }
+            .nav {
+                flex: 5 1 auto;
+                background: #ea584b;
+            }
+            .social {
+                background: #ea584b;
+                flex: 1 1 auto;
+            }
+        .text-main {
+            background: #f0763a;
+            height: auto;
+        }
+            h1 {
+                background: #ffcc5e;
+            }
+            
+    .section {
+        background: #000000;
+        display: flex;
+    }
+        .articles {
+            background: #44465e;
+            display: flex;
+            flex-flow: row wrap;
+            flex: 2 1 auto;
+        }
+
+            .article {
+                background: #1664a4;
+                flex: 1 1 40%;
+            }
+
+            .navegacio {
+                background: #6399bb;
+                flex: 1 1 100%;
+            }
+
+        .aside { /* quan la pantalla arriba a 800 ha e posar els anuncis un sota l'altre */ /* mediaQuery a secction */
+            background: #f94c47;
+            flex: 1 1 auto;
+        }
+
+            .publicitat {
+                background: #ffe380;
+            }
+        
+    .footer {
+        background: #000000;
+        display: flex;
+        justify-content: center;
+    }
+
+        .peu {
+            background: #e4a434;
+            width: 100%;
+        }
+
+/* per la versió tauleta cal un media query */
+
+ @media all and (max-width: 800px) {
+    .section {
+        background: #fff734;
+        flex-direction: column;
+    } 
+        
+    aside {
+        display: flex;
+        flex-flow: column wrap;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .articles {
+        background: #004763;
+        flex-direction: column;
+    }
+    .article {
+        background: #558991;
+    }
+    .navegacio {
+        background: #97d4c5;
+    }
+    .aside {
+        background: #ff784c;
+    }
+    .publicitat {
+        background: #ffab64;
+    }
+
+    .menu {
+        display: flex;
+        flex-flow: column wrap;
+        width: 100%;
+        align-items: stretch;
+    }
+
+}
